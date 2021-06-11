@@ -3,7 +3,33 @@ version: 2.1
 orbs:
   snyk: snyk/snyk@0.0.13
 
+parameters:
+  owner-repo:
+    type: string
+    default: "andrewinci/scala-library-template"
+
 jobs:
+  standard-version:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/repo
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "4a:a4:d9:c9:0b:4f:04:b7:78:df:31:88:7c:20:08:50"
+      - run:
+          name: Clone
+          command: |
+            mkdir -p ~/.ssh/
+            ssh-keyscan github.com >> ~/.ssh/known_hosts
+            git clone --depth 1 git@github.com:<< pipeline.parameters.owner-repo >>.git .
+      - run:
+          name: Auto release
+          command: |
+            git config --global user.email "deployment@bot.com"
+            git config --global user.name "Deployment Bot"
+            npx standard-version --releaseCommitMessageFormat "chore(release): {{currentTag}} [ci skip]"
+            git push --follow-tags
   build:
     docker:
       - image: circleci/openjdk:11-jdk
@@ -29,7 +55,7 @@ jobs:
           steps:
             - run:
                 name: Publish
-                command: sbt "set version := \"${CIRCLE_TAG}\"" publish
+                command: sbt "set version := \"$(echo $CIRCLE_TAG | cut -c 2- )\"" publish
       # Add the env COVERALLS_REPO_TOKEN=my-token to the circleci build env
       # to enable code coverage reporting
       #      - run:
@@ -53,6 +79,9 @@ workflows:
           filters:
             tags:
               ignore: /.*/
+      - standard-version:
+          requires:
+            - CI
       - build:
           name: Release
           publish: true
@@ -60,4 +89,4 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: /^\d+\.\d+\.\d+$/
+              only: /^v\d+\.\d+\.\d+$/

@@ -25,6 +25,7 @@ Simple template to create a scala library.
 - Munit for testing
 - Scalafmt
 - Publish to GH packages on tag
+- Auto release with [semantic-release](https://github.com/semantic-release/semantic-release) and [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
 - CircleCi config
     - Use the tag as package version
     - Code coverage with Coveralls
