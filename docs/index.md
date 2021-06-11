@@ -1,4 +1,11 @@
+---
+layout: default
+title: Scala lib template
+nav_order: 1
+---
 # Scala lib template
+
+Simple template to create a scala library.
 
 ## Use the template
 
@@ -13,7 +20,18 @@
 - Push the changes and enable the project in [CircleCI](https://app.circleci.com/projects/project-dashboard/github/<gitub_owner>)
 - Set the env variable `GITHUB_TOKEN` in [CircleCI](https://app.circleci.com/settings/project/github/<gitub_owner>/<repo_name>/environment-variables) to allow publishing packages
 
-## Get started
+## Features
+
+- Munit for testing
+- Scalafmt
+- Publish to GH packages on tag
+- CircleCi config
+    - Use the tag as package version
+    - Code coverage with Coveralls
+    - Snyk orb
+
+
+## Get started using this library
 
 🚧 Under construction 🚧
 
@@ -21,16 +39,3 @@
 externalResolvers += "scala-library-template packages" at "https://maven.pkg.github.com/"
 libraryDependencies += "andrewinci" %% "scala-library-template packages" % "0.1.0-SNAPSHOT"
 ```
-
-## Release
-
-Just create a tag in Github
-
-## Features
-
-- Circleci config
-- Munit
-- Code coverage
-- Scalafmt
-- Publish to GH packages on tag
-- Use the tag as package version
