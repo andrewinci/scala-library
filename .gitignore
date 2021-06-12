@@ -1,10 +1,2 @@
-.bsp
-.idea
-.metals
 .vscode
-
-target
-project/target
-project/project
-
-docs/_site
+.metals

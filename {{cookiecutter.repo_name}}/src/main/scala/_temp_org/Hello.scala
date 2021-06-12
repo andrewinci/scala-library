@@ -1,4 +1,4 @@
-package com.github.andrewinci
+package {{cookiecutter.organization}}
 
 object Hello extends Greeting with App {
   println(greeting)

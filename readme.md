@@ -1,14 +1,10 @@
-# Scala lib template
+# Scala library template
 
 See [here](https://andrewinci.github.io/scala-library-template/) to setup the template.
 
-## Get started using this library
-
-🚧 Under construction 🚧
-
-```scala
-externalResolvers += "scala-library-template packages" at "https://maven.pkg.github.com/"
-libraryDependencies += "andrewinci" %% "scala-library-template packages" % "0.1.0-SNAPSHOT"
+## Quick start
+```bash
+cookiecutter https://github.com/andrewinci/scala-library-template.git
 ```
 
 ## Features

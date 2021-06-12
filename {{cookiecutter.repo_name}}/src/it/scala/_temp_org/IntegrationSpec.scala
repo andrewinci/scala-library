@@ -1,4 +1,4 @@
-package com.github.andrewinci
+package {{cookiecutter.organization}}
 
 import munit.FunSuite
 
