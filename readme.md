@@ -1,24 +1,33 @@
 # Scala library template
 
-See [here](https://andrewinci.github.io/scala-library-template/) to setup the template.
-
 ## Quick start
+
+Use [cookiecutter](https://cookiecutter.readthedocs.io/en/1.7.3/README.html)
+
 ```bash
 cookiecutter https://github.com/andrewinci/scala-library-template.git
 ```
 
+or [cruft](https://cruft.github.io/cruft/)
+
+```bash
+cruft create https://github.com/andrewinci/scala-library-template.git
+```
+
 ## Features
 
-- Circleci config
-- Munit
-- Code coverage
+- Munit for testing
 - Scalafmt
 - Publish to GH packages on tag
-- Use the tag as package version
+- Auto release with [semantic-version](https://github.com/conventional-changelog/standard-version) and [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+- CircleCi config
+    - Use the tag as package version
+    - Code coverage with Coveralls
+    - Snyk orb
 
 ## Todo
 
 - [x] Set the version from tag
-- [ ] Complete how to use
 - [x] Automatic changelog
 - [x] https://www.scala-sbt.org/sbt-site/ (using just the docs)
+- [ ] Complete how to use
