@@ -5,18 +5,6 @@ nav_order: 2
 ---
 # Development
 
-
-## Features
-
-- Munit for testing
-- Scalafmt
-- Publish to GH packages on tag
-- Auto release with [semantic-version](https://github.com/conventional-changelog/standard-version) and [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
-- CircleCi config
-    - Use the tag as package version
-    - Code coverage with Coveralls
-    - Snyk orb
-
 ## Base commands
 
 Use `sbt scalafmtAll` to format the code.

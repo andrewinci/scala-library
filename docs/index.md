@@ -1,17 +1,16 @@
 ---
 layout: default
-title: {{cookiecutter.repo_name}}
+title: Scala lib template
 nav_order: 1
 ---
-# {{cookiecutter.repo_name}}
+# Scala lib template
 
-## Get started
+Simple template to create a scala library.
 
-🚧 Under construction 🚧
+Use cookiecutter to configure the template.
 
-```scala
-externalResolvers += "{{cookiecutter.repo_name}}" at "https://maven.pkg.github.com/"
-libraryDependencies += "{{cookiecutter.organization}}" %% "{{cookiecutter.repo_name}}" % "0.1.0-SNAPSHOT"
+```bash
+cookiecutter https://github.com/andrewinci/scala-library-template.git
 ```
 
 ## Features
