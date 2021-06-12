@@ -22,6 +22,16 @@ configure the GH token with access to the GH packages repo.
 ```bash
 git config --global github.token <personal token>
 ```
+alternatively it is possible to export the Github token with
+```bash
+export GITHUB_TOKEN="<token_with_packages_access>"
+```
+
+To publish the package run:
+```bash
+# version should be of the form \d+.\d+.\d+
+sbt "set version := \"<version>\"" publish
+```
 
 ## Documentation
 
