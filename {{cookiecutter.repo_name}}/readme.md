@@ -1,4 +1,4 @@
-# Scala lib template
+# {{cookiecutter.repo_name}}
 
 See [here](https://andrewinci.github.io/scala-library-template/) to setup the template.
 
@@ -7,8 +7,8 @@ See [here](https://andrewinci.github.io/scala-library-template/) to setup the te
 🚧 Under construction 🚧
 
 ```scala
-externalResolvers += "scala-library-template packages" at "https://maven.pkg.github.com/"
-libraryDependencies += "andrewinci" %% "scala-library-template packages" % "0.1.0-SNAPSHOT"
+externalResolvers += "{{cookiecutter.repo_name}}" at "https://maven.pkg.github.com/"
+libraryDependencies += "{{cookiecutter.organization}}" %% "{{cookiecutter.repo_name}}" % "0.1.0-SNAPSHOT"
 ```
 
 ## Features

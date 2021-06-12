@@ -1,6 +1,6 @@
-val _repoName = "scala-library-template"
-val _githubOwner = "andrewinci"
-val _organization = "com.github.andrewinci"
+val _repoName = "{{cookiecutter.repo_name}}"
+val _githubOwner = "{{cookiecutter.github_owner}}"
+val _organization = "{{cookiecutter.organization}}"
 
 lazy val publishSettings = Seq(
   githubOwner := _githubOwner,
@@ -9,7 +9,7 @@ lazy val publishSettings = Seq(
 )
 
 lazy val default = Seq(
-  organization := _githubOwner,
+  organization := _organization,
   scalaVersion := "2.12.13",
   versionScheme := Some("semver-spec"),
   version := "0.1.0-SNAPSHOT",
