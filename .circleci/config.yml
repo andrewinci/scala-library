@@ -22,7 +22,7 @@ jobs:
           command: |
             mkdir -p ~/.ssh/
             ssh-keyscan github.com >> ~/.ssh/known_hosts
-            git clone --depth 1 git@github.com:<< pipeline.parameters.owner-repo >>.git .
+            git clone git@github.com:<< pipeline.parameters.owner-repo >>.git .
       - run:
           name: Auto release
           command: |
