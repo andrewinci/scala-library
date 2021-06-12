@@ -13,7 +13,7 @@ Use `sbt test` to run the tests
 
 Use `sbt IntegrationTest / test` to run the integration tests
 
-## Publish/Consume the lib
+## Publish the lib
 
 This library is using the `sbt-github-packages` plugin.
 In order to publish and download the package from GH it is required to
@@ -37,5 +37,6 @@ sbt "set version := \"<version>\"" publish
 
 The documentation is generated with the [just the docs](https://pmarsceill.github.io/just-the-docs/) template.
 To render the documentation locally:
+- Move to 
 - Run `bundle install` to install the required gems
 - Run `bundle exec jekyll serve` to serve the documentation
