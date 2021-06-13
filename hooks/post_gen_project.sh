@@ -44,7 +44,7 @@ while true; do
     read -p "${cr%.}Sync git repo with github remote: https://github.com/$GH_OWNER/$GH_REPO.git?${cr%.}Make sure the Github repository already exists first${cr%.}Answer (y/n): " yn
     case $yn in
         [Yy]* ) git remote add origin "https://github.com/$GH_OWNER/$GH_REPO.git"
-                git push --set-upstream origin main -f
+                git push --set-upstream origin main
                 break;;
         [Nn]* ) exit;;
         * ) echo "Please answer yes or no.";;
