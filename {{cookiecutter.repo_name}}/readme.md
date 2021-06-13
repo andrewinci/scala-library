@@ -13,12 +13,3 @@ githubTokenSource := TokenSource.GitConfig("github.token") || TokenSource.Enviro
 externalResolvers += "{{cookiecutter.repo_name}}" at "https://maven.pkg.github.com/{{cookiecutter.github_owner}}/{{cookiecutter.repo_name}}",
 libraryDependencies += "{{cookiecutter.organization}}" %% "{{cookiecutter.repo_name}}" % "<latest version>"
 ```
-
-## Features
-
-- Circleci config
-- Munit
-- Code coverage
-- Scalafmt
-- Publish to GH packages on tag
-- Use the tag as package version
