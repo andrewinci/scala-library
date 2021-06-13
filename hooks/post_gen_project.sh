@@ -9,6 +9,11 @@ TEMP_ORG_FOLDER="_temp_org"
 
 cr=`echo $'\n.'`
 
+if [ ! -d "src/it/scala/$TEMP_ORG_FOLDER" ] ; then
+    echo "Repository already initialised"
+    exit 0
+fi
+
 echo "Fix the folder structure to respect the organization name"
 
 ORG_FOLDER=$(echo $ORG | sed "s/\./\//g")
@@ -46,7 +51,7 @@ while true; do
         [Yy]* ) git remote add origin "https://github.com/$GH_OWNER/$GH_REPO.git"
                 git push --set-upstream origin main
                 break;;
-        [Nn]* ) exit;;
+        [Nn]* ) exit 0;;
         * ) echo "Please answer yes or no.";;
     esac
 done
