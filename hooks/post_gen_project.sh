@@ -10,7 +10,7 @@ TEMP_ORG_FOLDER="_temp_org"
 cr=`echo $'\n.'`
 
 while true; do
-    read -p "${cr%.}Start the CI configuration (only required for the first initialization)?${cr%.}" yn
+    read -p "${cr%.}Start the CI configuration (only required for the first initialization)?${cr%.}Answer (y/n):" yn
     case $yn in
         [Yy]* ) break;; 
         [Nn]* ) exit 0;;
