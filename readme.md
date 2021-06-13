@@ -30,4 +30,4 @@ cruft create https://github.com/andrewinci/scala-library-template.git
 - [x] Set the version from tag
 - [x] Automatic changelog
 - [x] https://www.scala-sbt.org/sbt-site/ (using just the docs)
-- [ ] Complete how to use
+- [x] Complete how to use
