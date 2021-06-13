@@ -9,10 +9,14 @@ TEMP_ORG_FOLDER="_temp_org"
 
 cr=`echo $'\n.'`
 
-if [ ! -d "src/it/scala/$TEMP_ORG_FOLDER" ] ; then
-    echo "Repository already initialised"
-    exit 0
-fi
+while true; do
+    read -p "${cr%.}Start the CI configuration (only required for the first initialization)?${cr%.}" yn
+    case $yn in
+        [Yy]* ) break;; 
+        [Nn]* ) exit 0;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
 
 echo "Fix the folder structure to respect the organization name"
 
